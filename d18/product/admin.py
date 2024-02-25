@@ -1,3 +1,4 @@
 from django.contrib import admin
-
-# Register your models here.
+from prodcts.models import *
+admin.register(Product)
+admin.register(ProductCategory)
