@@ -1,4 +1,4 @@
 from django.contrib import admin
-from prodcts.models import *
-admin.register(Product)
-admin.register(ProductCategory)
+from product.models import *
+admin.site.register(Product)
+admin.site.register(ProductCategory)

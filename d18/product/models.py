@@ -11,3 +11,8 @@ class Product(models.Model):
     desccription = models.TextField(null=True, blank=True)
     price = models.DecimalField(max_digits = 123, decimal_places = 2)
     quantity = models.PositiveIntegerField(default = 0)
+    image = models.ImageField(upload_to = 'products_images')
+    category = models.ForeignKey(to = ProductCategory, on_delete = models.PROTECT)
+
+    def __str__(self):
+        return f'{self.name} / категория: {self.category.name}'
