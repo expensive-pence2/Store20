@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from .models import Product, ProductCategory
 
+app_name = 'product'
+
 def index(request):
     context={"name":"Магазинус"}
 
