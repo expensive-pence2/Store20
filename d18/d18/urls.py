@@ -19,12 +19,14 @@ from django.urls import path
 from product.views import *
 from django.conf.urls.static import static
 from django.conf import settings
+from django.conf.urls import include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index),
-    path('products', products, name = 'products'),
-    path('login', login, name = 'login'),
+    path('products/', include('product.urls', namespace = 'products')),
+    # path('login', login, name = 'login'),
+    # path( 'users/', include( 'users.urls', namespace = 'users' )),
 ]
 
 if settings.DEBUG == True:
