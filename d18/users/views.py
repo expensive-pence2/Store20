@@ -1,9 +1,9 @@
 from django.urls import reverse
-from d18.users.models import User
-from d18.users.forms import UserLoginForm, UserRegistrationForm, UserProfileForm
+from .models import User
+from .forms import UserLoginForm, UserRegistrationForm, UserProfileForm
 from django.shortcuts import render, HttpResponseRedirect
 from django.contrib import messages
-from products.models import Basket
+from product.models import Basket
 
 from django.contrib import auth
 
